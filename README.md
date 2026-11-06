@@ -23,7 +23,7 @@ drives the agent on the other side.
 
 ## The levels of integration
 
-There are several ways to connect an agent to a client. From best to least work:
+There are several ways to connect an agent to a client, from strongest to weakest:
 
 1. **Native.** The agent speaks ACP itself.
 2. **In-process adapter.** A long-lived program imports the agent's Python code and
@@ -125,6 +125,7 @@ Notes on the table:
 
 - The Aider skip is the usage probe. The mock model has no known context window, so there is no usage update to check.
 - The one Aider stability failure is a Python-block scenario. It does not apply to Aider, which uses its own edit format.
+- In one later `--quick` run, `model_errors` also failed, with a `tasklist.exe` process seen as left over. It then passed twice when run alone. The cause is not proven, so treat it as possibly flaky.
 - The real DeepSeek and existing-file edit results are from an earlier version of the Aider adapter, before display polish.
 - The Open Interpreter adapter is not included here. Its licence (AGPL-3.0) needs a check first.
 
