@@ -1,0 +1,12 @@
+# Python environments
+*-env/
+.venv/
+venv/
+
+# Test output
+*-results*.txt
+results/
+
+# Python cache
+__pycache__/
+*.pyc
